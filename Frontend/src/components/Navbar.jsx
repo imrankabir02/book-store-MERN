@@ -77,7 +77,7 @@ export default function Navbar() {
                                 {navItems}
                             </ul>
                         </div>
-                        <a className="text-2xl font-semibold cursor-pointer">Book Store</a>
+                        <a href='/' className="text-2xl font-semibold cursor-pointer">Book Store</a>
                     </div>
                     <div className="navbar-end">
                         <div className="navbar-center hidden lg:flex">

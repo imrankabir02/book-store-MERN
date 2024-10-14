@@ -30,7 +30,7 @@ export default function Banner() {
                             <input type="text" className="grow" placeholder="Email" />
                         </label>
                     </div>
-                    <button className="btn mt-6 mb-6 btn-secondary">Send</button>
+                    <button className="mt-5 cursor-pointer rounded-lg border-[1px] hover:bg-blue-500 hover:text-white duration-200 px-2 py-1">Send</button>
                 </div>
                 <div className="w-full md:w-1/2 order-1 mb-6 px-5">
                     <img src={banner} className="w-92 h-100 rounded-lg shadow-xl hover:scale-105 duration-200" alt="Banner" />
