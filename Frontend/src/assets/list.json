@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Story Book",
+        "title": "This is story book title",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/premium-photo/stack-colorful-books_1207614-22534.jpg?w=740"
+    },
+    {
+        "id": 2,
+        "name": "Sports Book",
+        "title": "This is sports book title",
+        "price": 20,
+        "category": "Free",
+        "image": "https://img.freepik.com/premium-photo/stack-colorful-books_1207614-22534.jpg?w=740"
+    },
+    {
+        "id": 3,
+        "name": "Novel Book",
+        "title": "This is story book title",
+        "price": 10,
+        "category": "Novel",
+        "image": "https://img.freepik.com/premium-photo/stack-colorful-books_1207614-22534.jpg?w=740"
+    },
+    {
+        "id": 4,
+        "name": "Food Book",
+        "title": "This is story book title",
+        "price": 20,
+        "category": "Food",
+        "image": "https://img.freepik.com/premium-photo/stack-colorful-books_1207614-22534.jpg?w=740"
+    },
+    {
+        "id": 5,
+        "name": "Story Book",
+        "title": "This is story book title",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/premium-photo/stack-colorful-books_1207614-22534.jpg?w=740"
+    },
+    {
+        "id": 6,
+        "name": "Story Book",
+        "title": "This is story book title",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/premium-photo/stack-colorful-books_1207614-22534.jpg?w=740"
+    },
+    {
+        "id": 7,
+        "name": "Story Book",
+        "title": "This is story book title",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/premium-photo/stack-colorful-books_1207614-22534.jpg?w=740"
+    },
+    {
+        "id": 8,
+        "name": "Story Book",
+        "title": "This is story book title",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/premium-photo/stack-colorful-books_1207614-22534.jpg?w=740"
+    }
+]
