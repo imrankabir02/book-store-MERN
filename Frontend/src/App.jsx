@@ -1,3 +1,4 @@
+import Abouts from "./about/Abouts";
 import Contacts from "./contacts/Contacts";
 import Courses from "./courses/Courses";
 import Home from "./home/Home";
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/course" element={<Courses />} />
         <Route path="/contact" element={<Contacts />} />
+        <Route path="/about" element={<Abouts />} />
       </Routes>
     </>
   )
