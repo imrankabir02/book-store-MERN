@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom'
 export default function Course() {
     return (
         <>
-            <div className='max-w-screen-2xl container mx-auto md:px-20 px-4'>
-                <div className='text-2xl font-semibold mt-28 text-center space-y-2'>
+            <div className='container px-4 mx-auto max-w-screen-2xl md:px-20'>
+                <div className='space-y-2 text-2xl font-semibold text-center mt-28'>
                     <h1>
                         Hey, Congo! Start Learning!
                     </h1>
@@ -18,10 +18,9 @@ export default function Course() {
                         <button className='text-sm font-normal cursor-pointer rounded-lg border-[1px] hover:bg-blue-500 hover:text-white duration-200 px-2 py-1'>
                             Back
                         </button>
-
                     </Link>
                 </div>
-                <div className='mt-12 grid grid-cols-1 md:grid-cols-4'>
+                <div className='grid grid-cols-1 mt-12 md:grid-cols-4'>
                     {
                         list.map((item) => (
 
