@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Login from './Login';
 
 export default function Navbar() {
     const [sticky, setSticky] = useState(false)
@@ -60,7 +61,7 @@ export default function Navbar() {
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5"
+                                    className="w-5 h-5"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor">
@@ -80,19 +81,19 @@ export default function Navbar() {
                         <a href='/' className="text-2xl font-semibold cursor-pointer">Book Store</a>
                     </div>
                     <div className="navbar-end">
-                        <div className="navbar-center hidden lg:flex">
-                            <ul className="menu menu-horizontal px-1">
+                        <div className="hidden navbar-center lg:flex">
+                            <ul className="px-1 menu menu-horizontal">
                                 {navItems}
                             </ul>
                         </div>
                         <div className="hidden md:block">
-                            <label className="px-3 py-1 border rounded-md flex items-center gap-2">
+                            <label className="flex items-center gap-2 px-3 py-1 border rounded-md">
                                 <input type="text" className="grow" placeholder="Search" />
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 16 16"
                                     fill="currentColor"
-                                    className="h-4 w-4 opacity-70">
+                                    className="w-4 h-4 opacity-70">
                                     <path
                                         fillRule="evenodd"
                                         d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM6.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
@@ -107,7 +108,7 @@ export default function Navbar() {
 
                                 {/* sun icon */}
                                 <svg
-                                    className="swap-off h-6 w-6 fill-current"
+                                    className="w-6 h-6 fill-current swap-off"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24">
                                     <path
@@ -116,7 +117,7 @@ export default function Navbar() {
 
                                 {/* moon icon */}
                                 <svg
-                                    className="swap-on h-6 w-6 fill-current"
+                                    className="w-6 h-6 fill-current swap-on"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24">
                                     <path
@@ -125,7 +126,10 @@ export default function Navbar() {
                             </label>
                         </div>
                         <div >
-                            <a className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer">Login</a>
+                            <a className="px-3 py-2 text-white duration-300 bg-black rounded-md cursor-pointer hover:bg-slate-800" onClick={() => document.getElementById("my_modal_3").showModal()}>
+                                Login
+                            </a>
+                            <Login />
                         </div>
                     </div>
                 </div>
