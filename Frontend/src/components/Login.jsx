@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Login() {
+    const [isCancelled, setIsCancelled] = useState(false);
+
+    const handleCancel = () => {
+        setIsCancelled(true);
+    }
     return (
         <>
             <div>
@@ -11,55 +16,26 @@ export default function Login() {
                             {/* if there is a button in form, it will close the modal */}
                             <button className="absolute btn btn-sm btn-circle btn-ghost right-2 top-2">✕</button>
                         </form>
-                        <h3 className="text-lg font-bold">Login</h3>
-                        <button className="absolute btn btn-sm btn-circle btn-ghost right-2 top-2">✕</button>
-
-                        <div className='mt-4 space-y-4'>
-                            <span>
-                                Email
-                            </span>
+                        <h3 className="text-lg font-bold">Login!</h3>
+                        <br />
+                        <div>
+                            <span>Email</span>
                             <br />
-                            <input type="email" placeholder='Enter your email' />
+                            <input type="email" placeholder='Enter your email' className=""/>
                         </div>
-                        <div className='mt-4 space-y-4'>
-                            <span>
-                                Password
-                            </span>
+                        <div>
+                            <span>Password</span>
                             <br />
-                            <input type="text" placeholder='Enter your password' />
+                            <input type="password" placeholder='Enter your password'/>
                         </div>
-                        <div className="modal-action">
-                            <button>Login</button>
-                            <p>Not Registered? <span>Signup</span></p>
+                        <br />
+                        <div className='flex justify-between'>
+                            <button className="px-3 py-2 text-white duration-300 bg-black rounded-md cursor-pointer hover:bg-slate-800">Login</button>
+                            <span>Not registered?</span>
+                            <button className="px-3 py-2 text-white duration-300 bg-black rounded-md cursor-pointer hover:bg-slate-800">SignUp</button>
                         </div>
                     </div>
                 </dialog>
-
-                {/* <dialog id="login_modal" className="modal">
-                    <div className="modal-box">
-                        <h3 className="text-lg font-bold">Login</h3>
-                        <button className="absolute btn btn-sm btn-circle btn-ghost right-2 top-2">✕</button>
-
-                        <div className='mt-4 space-y-4'>
-                            <span>
-                                Email
-                            </span>
-                            <br />
-                            <input type="email" placeholder='Enter your email' />
-                        </div>
-                        <div className='mt-4 space-y-4'>
-                            <span>
-                                Password
-                            </span>
-                            <br />
-                            <input type="text" placeholder='Enter your password' />
-                        </div>
-                        <div className="modal-action">
-                            <button>Login</button>
-                            <p>Not Registered? <span>Signup</span></p>
-                        </div>
-                    </div>
-                </dialog> */}
             </div>
         </>
     )

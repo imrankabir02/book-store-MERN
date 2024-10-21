@@ -126,7 +126,7 @@ export default function Navbar() {
                             </label>
                         </div>
                         <div >
-                            <a className="px-3 py-2 text-white duration-300 bg-black rounded-md cursor-pointer hover:bg-slate-800" onClick={() => document.getElementById("my_modal_3").showModal()}>
+                            <a className="px-3 py-2 text-white duration-300 bg-black rounded-md cursor-pointer hover:bg-slate-800" onClick={()=>document.getElementById('my_modal_3').showModal()}>
                                 Login
                             </a>
                             <Login />
