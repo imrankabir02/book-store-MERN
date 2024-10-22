@@ -1,9 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Cards from './Cards'
 import list from '../assets/list.json'
 import { Link } from 'react-router-dom'
+import axios from "axios";
 
 export default function Course() {
+    const [books, setBooks] = useState([]);
+    useEffect(() => {
+        const getBooks = async () => {
+            try {
+                const res = await axios.get("http://localhost:4001/book");
+                console.log("API response: ", res.data);
+
+                // Only set the books state once
+                if (res.data && res.data.data) {
+                    setBooks(res.data.data); // If your API returns { data: [...books] }
+                } else {
+                    setBooks(Array.isArray(res.data) ? res.data : []); // If API returns books directly
+                }
+            } catch (error) {
+                console.log(error);
+                setBooks([]);
+            }
+        };
+        getBooks();
+    }, []);
     return (
         <>
             <div className='container px-4 mx-auto max-w-screen-2xl md:px-20'>
@@ -21,14 +42,17 @@ export default function Course() {
                     </Link>
                 </div>
                 <div className='grid grid-cols-1 mt-12 md:grid-cols-4'>
-                    {
-                        list.map((item) => (
-
-                            <Cards key={item.id} item={item} />
+                    {books && books.length > 0 ? (
+                        books.map((item) => (
+                            <Cards key={item._id} item={item} />
                         ))
-                    }
+
+                    ) : (
+                        <p>No Books Available</p>
+                    )}
                 </div>
             </div>
         </>
     )
 }
+
